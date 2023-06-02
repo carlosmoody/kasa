@@ -1,0 +1,27 @@
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px 0px 100px;
+}
+
+.headerNav {
+  display: flex;
+  flex-direction: row;
+  gap: 57px;
+}
+
+.headerNavLink {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.headerLogo {
+  width: 211;
+  height: 68px;
+}
+
+.headerLogo path {
+  fill: #FF6060;
+}

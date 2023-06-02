@@ -1,0 +1,29 @@
+.bannerWrapper {
+  position: relative;
+  height: 223px;
+  overflow: hidden;
+  margin: 50px 100px 0px 100px;
+}
+
+.bannerPicture {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.5);
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.bannerTitle {
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+}

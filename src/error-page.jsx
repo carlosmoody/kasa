@@ -1,7 +1,7 @@
 import { useRouteError } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import styled from "styled-components";
 
 const StyledHeaderOne = styled.h1`

@@ -1,0 +1,16 @@
+.homeWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  background-color: #F7F7F7;
+  border-radius: 25px;
+  margin: 43px 100px 0px 100px;
+  padding: 56px 50px 56px 50px;
+}

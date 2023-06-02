@@ -1,0 +1,4 @@
+.aboutWrapper {
+  display: flex;
+  flex-direction: column;
+}

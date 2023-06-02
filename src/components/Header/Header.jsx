@@ -1,39 +1,12 @@
-import styled from "styled-components";
+import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
-import colors from "../utils/style/colors";
-
-const StyledHeaderContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 100px 0px 100px;
-`;
-
-const StyledNav = styled.nav`
-  display: flex;
-  flex-direction: row;
-  gap: 57px;
-`;
-
-const NavLink = styled(Link)`
-  font-size: 24px;
-  font-weight: 500;
-`;
-
-const StyledLogo = styled.svg`
-  width: 211;
-  height: 68px;
-  & path {
-    fill: ${colors.primary};
-  }
-`;
 
 export default function Header() {
   return (
-    <StyledHeaderContainer>
-      <NavLink to="/">
-        <StyledLogo
+    <div className={styles.headerWrapper}>
+      <Link to="/" className={styles.headerNavLink}>
+        <svg
+          className={styles.headerLogo}
           viewBox="0 0 211 68"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -43,12 +16,16 @@ export default function Header() {
           <path d="M210.322 33.7221V62.2562H202.218V55.9565C199.456 60.2181 194.115 62.6268 186.748 62.6268C176.066 62.6268 169.436 56.8829 169.436 48.7303C169.436 41.1336 174.224 35.0191 188.221 35.0191H201.666V33.3516C201.666 26.1254 197.43 22.0491 189.142 22.0491C183.617 22.0491 177.908 24.0873 174.224 27.0518L170.725 20.5668C175.514 16.6758 182.512 14.4524 190.063 14.4524C203.139 14.6377 210.322 20.9374 210.322 33.7221ZM201.85 47.8039V41.1336H188.774C180.302 41.1336 177.908 44.4687 177.908 48.3597C177.908 52.9919 181.775 55.9565 188.221 55.9565C194.667 56.1418 199.824 53.3625 201.85 47.8039Z" />
           <path d="M91.5323 49.842V62.4415L96.8732 59.2916V46.6921L91.5323 49.842Z" />
           <path d="M106.266 34.4633L84.3497 21.6786L72.1945 14.6377L60.2234 35.575L60.4076 55.2153L82.1396 68.0001L84.3497 66.7031V48.1745L94.1106 30.9429L104.056 36.6867V55.2153L106.266 53.9184V34.4633Z" />
-        </StyledLogo>
-      </NavLink>
-      <StyledNav>
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/about">A propos</NavLink>
-      </StyledNav>
-    </StyledHeaderContainer>
+        </svg>
+      </Link>
+      <nav className={styles.headerNav}>
+        <Link to="/" className={styles.headerNavLink}>
+          Accueil
+        </Link>
+        <Link to="/about" className={styles.headerNavLink}>
+          A propos
+        </Link>
+      </nav>
+    </div>
   );
 }

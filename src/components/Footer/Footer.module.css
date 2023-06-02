@@ -1,0 +1,23 @@
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding-top: 66px;
+}
+
+.footerLogo {
+  width: 122px;
+  height: 39px;
+}
+
+.footerLogo path {
+  fill: white;
+}
+
+.footerCopyright {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
