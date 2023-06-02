@@ -1,5 +1,6 @@
 import homePicture from "../assets/IMG.png";
 import styled from "styled-components";
+import colors from "../utils/style/colors";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -36,6 +37,13 @@ const StyledBannerTitle = styled.h1`
   color: white;
 `;
 
+const StyledList = styled.div`
+  background-color: ${colors.background};
+  border-radius: 25px;
+  margin: 43px 100px 0px 100px;
+  padding: 56px 50px 56px 50px;
+`;
+
 export default function Home() {
   return (
     <StyledWrapper>
@@ -45,6 +53,7 @@ export default function Home() {
           <StyledBannerTitle>Chez vous, partout et ailleurs</StyledBannerTitle>
         </StyledBannerOverlay>
       </StyledBanner>
+      <StyledList />
     </StyledWrapper>
   );
 }
