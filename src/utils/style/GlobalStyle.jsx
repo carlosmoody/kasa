@@ -9,7 +9,6 @@ const StyledGlobalStyle = createGlobalStyle`
 
     body {
       margin: 0;
-      padding: 40px 100px 0px 100px;
     }
 
     a:link {
