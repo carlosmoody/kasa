@@ -1,0 +1,17 @@
+.tag {
+  height: 25px;
+  min-width: 115px;
+  box-sizing: border-box;
+  padding: 0px 10px 0px 10px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
