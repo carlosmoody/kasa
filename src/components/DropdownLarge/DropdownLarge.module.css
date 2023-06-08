@@ -1,8 +1,7 @@
 .dropdownWrapper {
   width: 100%;
   max-width: 1023px;
-  padding-top: 24px;
-  padding-bottom: 14px;
+  padding-bottom: 31px;
   display: flex;
   flex-direction: column;
   gap: 0px;
