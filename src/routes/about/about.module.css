@@ -1,4 +1,13 @@
 .aboutWrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin: 50px 100px 0px 100px;
+}
+
+.aboutContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
 }
