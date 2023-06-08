@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import styles from "./details.module.css";
+import Slideshow from "../../components/Slideshow/Slideshow";
 import Avatar from "../../components/Avatar/Avatar";
 import Tags from "../../components/Tags/Tags";
 import Stars from "../../components/Stars/Stars";
@@ -15,11 +16,12 @@ export default function Details() {
 
   const details = getDetails(id);
 
-  const equipments = details.equipments.join("\n");
+  const equipments = details.equipments.join(" ");
   console.log(equipments);
 
   return (
     <div className={styles.detailsWrapper}>
+      <Slideshow images={details.pictures} />
       <div className={styles.detailsHeader}>
         <div>
           <h2 className={styles.detailsTitle}>{details.title}</h2>
