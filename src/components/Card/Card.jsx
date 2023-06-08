@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 
 export default function Card(props) {
   return (
-    <Link to={`/${props.id}`}>
+    <Link to={`/details/${props.id}`}>
       <div className={styles.cardWrapper}>
         <img className={styles.cardCover} src={props.cover} alt={props.title} />
         <div className={styles.cardGradient}></div>
