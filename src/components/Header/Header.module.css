@@ -15,6 +15,7 @@
 .headerNavLink {
   font-size: 24px;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .headerLogo {

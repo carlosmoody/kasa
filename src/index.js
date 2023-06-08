@@ -1,39 +1,27 @@
 import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/root/root";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./utils/style/GlobalStyle";
-import ErrorPage from "./routes/error-page/error-page";
+import Error from "./components/Error/Error";
 import Home from "./routes/home/home";
 import About from "./routes/about/about";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/details/:id",
-        element: <p>Page d'une location</p>,
-      },
-    ],
-  },
-]);
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <GlobalStyle />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details/:id" element="<p>Page d'une location</p>" />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   </React.StrictMode>
 );
