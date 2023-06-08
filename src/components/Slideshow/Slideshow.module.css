@@ -20,6 +20,10 @@
   cursor: pointer;
 }
 
+.slideshowArrowPrevious {
+  height: 79px;
+}
+
 .slideshowNext {
   position: absolute;
   top: 0px;
@@ -31,6 +35,11 @@
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
+}
+
+.slideshowArrowNext {
+  height: 79px;
+  rotate: 180deg;
 }
 
 .hide {

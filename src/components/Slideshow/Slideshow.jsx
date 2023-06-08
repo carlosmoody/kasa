@@ -1,4 +1,5 @@
 import styles from "./Slideshow.module.css";
+import slideshowArrow from "../../assets/slideshowArrow.png";
 import { useState } from "react";
 
 export default function Slideshow(props) {
@@ -35,7 +36,11 @@ export default function Slideshow(props) {
         }
         onClick={() => scrollImages("previous")}
       >
-        <span>P</span>
+        <img
+          className={styles.slideshowArrowPrevious}
+          src={slideshowArrow}
+          alt="précédent"
+        />
       </div>
       <div
         className={
@@ -45,7 +50,11 @@ export default function Slideshow(props) {
         }
         onClick={() => scrollImages("next")}
       >
-        <span>N</span>
+        <img
+          className={styles.slideshowArrowNext}
+          src={slideshowArrow}
+          alt="suivant"
+        />
       </div>
       <div className={styles.slideshowPosition}>
         <span className={styles.slideshowPositionText}>

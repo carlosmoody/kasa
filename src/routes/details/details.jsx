@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, redirect } from "react-router-dom";
 import styles from "./details.module.css";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Avatar from "../../components/Avatar/Avatar";
@@ -11,7 +11,8 @@ export default function Details() {
   const { id } = useParams();
 
   const getDetails = (id) => {
-    return mockData.find((entry) => entry.id === id);
+    const data = mockData.find((entry) => entry.id === id);
+    return data;
   };
 
   const details = getDetails(id);
