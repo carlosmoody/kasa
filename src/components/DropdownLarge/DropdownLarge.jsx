@@ -12,7 +12,7 @@ export default function DropdownLarge(props) {
   return (
     <div className={styles.dropdownWrapper}>
       <button onClick={toggleDropdown}>
-        <h3>{props.title}</h3>
+        <h3 className={styles.dropdownLargeTitle}>{props.title}</h3>
         <img
           src={dropdownArrow}
           alt="flêche"
@@ -26,7 +26,7 @@ export default function DropdownLarge(props) {
             : styles.answerWrapper
         }
       >
-        <p>{props.content}</p>
+        <p className={styles.dropdownLargeText}>{props.content}</p>
       </div>
     </div>
   );

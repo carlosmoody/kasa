@@ -1,0 +1,31 @@
+.detailsWrapper {
+  margin: 50px 100px 0px 100px;
+}
+
+.detailsHeader {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-row-gap: 20px;
+}
+
+.detailsTitle {
+  margin: 0px;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.detailsLocation {
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.detailsDropdownsWrapper {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+} 

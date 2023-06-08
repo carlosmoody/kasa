@@ -19,7 +19,7 @@ button {
   align-items: center;
 }
 
-button h3 {
+.dropdownLargeTitle {
   color: white;
   font-size: 24px;
   font-weight: 500;
@@ -51,7 +51,8 @@ button h3 {
   display: block;
 }
 
-p {
+.dropdownLargeText {
   font-size: 24px;
   font-weight: 400;
+  margin: 0px;
 }

@@ -4,10 +4,13 @@ export default function Avatar(props) {
   return (
     <div className={styles.avatarWrapper}>
       <div className={styles.avatarName}>
-        <p>{props.fname}</p>
-        <p>{props.lname}</p>
+        <p className={styles.avatarNameText}>{props.name}</p>
       </div>
-      <img src={props.url} alt="Propriétaire du logement" />
+      <img
+        className={styles.avatarImage}
+        src={props.url}
+        alt="Propriétaire du logement"
+      />
     </div>
   );
 }
