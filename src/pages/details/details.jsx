@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import styles from "./details.module.css";
 import Slideshow from "../../components/Slideshow/Slideshow";
@@ -9,6 +10,10 @@ import mockData from "../../assets/data.json";
 import dropdownStyles from "../../components/Dropdown/Dropdown.module.css";
 
 export default function Details() {
+  useEffect(() => {
+    document.title = `Kasa - Détails du logement`;
+  }, []);
+
   const { id } = useParams();
 
   const getDetails = (id) => {

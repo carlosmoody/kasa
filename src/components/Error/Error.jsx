@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Error.module.css";
 
 export default function Error() {
+  useEffect(() => {
+    document.title = `Kasa - Page non trouvée`;
+  }, []);
+
   return (
     <div className={styles.errorWrapper} id="error-page">
       <h1 className={styles.errorTitle}>404</h1>
