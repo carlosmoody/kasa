@@ -6,6 +6,7 @@ import Tags from "../../components/Tags/Tags";
 import Stars from "../../components/Stars/Stars";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import mockData from "../../assets/data.json";
+import dropdownStyles from "../../components/Dropdown/Dropdown.module.css";
 
 export default function Details() {
   const { id } = useParams();
@@ -17,8 +18,11 @@ export default function Details() {
 
   const details = getDetails(id);
 
-  const equipments = details.equipments.join(" ");
-  console.log(equipments);
+  const equipmentList = details.equipments.map((item, index) => (
+    <li key={index} className={dropdownStyles.itemList}>
+      {item}
+    </li>
+  ));
 
   return (
     <div className={styles.detailsWrapper}>
@@ -42,7 +46,11 @@ export default function Details() {
           title="Description"
           content={details.description}
         />
-        <Dropdown location="details" title="Équipements" content={equipments} />
+        <Dropdown
+          location="details"
+          title="Équipements"
+          content={equipmentList}
+        />
       </div>
     </div>
   );
