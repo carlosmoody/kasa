@@ -14,8 +14,8 @@ h2 {
   font-size: 18px;
   font-weight: 500;
   text-decoration: underline;
-  padding-top: 182px;
-  padding-bottom: 80px;
+  margin-top: 182px;
+  margin-bottom: 80px;
 }
 
 .errorWrapper {
