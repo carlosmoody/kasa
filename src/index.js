@@ -4,11 +4,11 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./utils/style/GlobalStyle";
 import Error from "./components/Error/Error";
-import Home from "./routes/home/home";
-import About from "./routes/about/about";
+import Home from "./pages/home/home";
+import About from "./pages/about/about";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Details from "./routes/details/details";
+import Details from "./pages/details/details";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
