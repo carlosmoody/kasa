@@ -2,7 +2,13 @@ import styles from "./Banner.module.css";
 
 export default function Banner(props) {
   return (
-    <div className={styles.bannerWrapper}>
+    <div
+      className={
+        props.location === "home"
+          ? `${styles.bannerWrapper} ${styles.smallerBannerOnMobile}`
+          : `${styles.bannerWrapper}`
+      }
+    >
       <img
         className={styles.bannerPicture}
         src={props.picture}

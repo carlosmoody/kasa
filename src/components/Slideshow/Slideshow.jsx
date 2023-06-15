@@ -31,13 +31,13 @@ export default function Slideshow(props) {
       <div
         className={
           listLength === 1
-            ? `${styles.slideshowPrevious} ${styles.hide}`
-            : styles.slideshowPrevious
+            ? `${styles.slideshowButton} ${styles.slideshowPrevious} ${styles.hide}`
+            : `${styles.slideshowButton} ${styles.slideshowPrevious}`
         }
         onClick={() => scrollImages("previous")}
       >
         <img
-          className={styles.slideshowArrowPrevious}
+          className={styles.slideshowArrow}
           src={slideshowArrow}
           alt="précédent"
         />
@@ -45,13 +45,13 @@ export default function Slideshow(props) {
       <div
         className={
           listLength === 1
-            ? `${styles.slideshowNext} ${styles.hide}`
-            : styles.slideshowNext
+            ? `${styles.slideshowButton} ${styles.slideshowNext} ${styles.hide}`
+            : `${styles.slideshowButton} ${styles.slideshowNext}`
         }
         onClick={() => scrollImages("next")}
       >
         <img
-          className={styles.slideshowArrowNext}
+          className={styles.slideshowArrow + " " + styles.slideshowArrowRotate}
           src={slideshowArrow}
           alt="suivant"
         />

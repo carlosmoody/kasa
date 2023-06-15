@@ -8,10 +8,25 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 50px;
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
   border-radius: 25px;
   padding: 56px 50px 56px 50px;
   margin-bottom: 43px;
+}
+
+@media screen and (max-width: 1030px) {
+  .homeWrapper {
+    margin: 20px 20px 0px 20px;
+  }
+
+  .list {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 24px;
+  }
 }

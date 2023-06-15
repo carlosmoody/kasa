@@ -7,15 +7,10 @@
 }
 
 .avatarName {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.avatarNameText {
   font-size: 18px;
   font-weight: 500px;
   text-align: right;
+  max-width: 93px;
   color: var(--primary-color);
   margin: 0px;
 }
@@ -24,4 +19,25 @@
   width: 64px;
   height: 64px;
   border-radius: 64px;
+}
+
+@media screen and (max-width: 1030px) {
+  .avatarWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    height: 64px;
+  }
+  
+  .avatarName {
+    font-size: 12px;
+    max-width: 60px;
+  }
+  
+  .avatarImage {
+    width: 32px;
+    height: 32px;
+  }
+  
 }

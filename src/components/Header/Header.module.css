@@ -19,7 +19,7 @@
 }
 
 .headerLogo {
-  width: 211;
+  width: 211px;
   height: 68px;
 }
 
@@ -29,4 +29,23 @@
 
 .active {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1030px) {
+  .headerWrapper {
+    padding: 20px 20px 0px 20px;
+  }
+
+  .headerLogo {
+    width: 145px;
+    height: 47px;
+  }
+
+  .headerNav {
+    gap: 10px;
+  }
+
+  .headerNavLink {
+    font-size: 12px;
+  }
 }

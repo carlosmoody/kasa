@@ -1,7 +1,7 @@
 .cardWrapper {
   position: relative;
   height: 340px;
-  width: 340px;
+  max-width: 340px;
   border-radius: 10px;
 }
 
@@ -29,11 +29,17 @@
 
 .cardTitle {
   position: absolute;
-  bottom: 20px;
+  bottom: -8px;
   left: 20px;
-  width: 300px;
+  width: 250px;
   height: 52px;
   font-size: 18px;
   font-weight: 500;
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1030px) {
+  .cardWrapper {
+    height: 335px;
+  }
 }

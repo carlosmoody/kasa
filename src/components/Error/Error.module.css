@@ -1,21 +1,25 @@
-h1 {
+.errorTitle {
   font-size: 288px;
   font-weight: 700;
   padding: 0px;
   margin: 0px;
+  margin-top: 100px;
 }
 
-h2 {
+.errorText {
+  text-align: center;
   font-size: 36px;
   font-weight: 500;
+  padding: 0px;
+  margin: 0px;
 }
 
 .returnToHome {
   font-size: 18px;
   font-weight: 500;
   text-decoration: underline;
-  margin-top: 182px;
-  margin-bottom: 80px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .errorWrapper {
@@ -23,4 +27,23 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+}
+
+@media screen and (max-width: 1030px) {
+  .errorTitle {
+    font-size: 96px;
+    font-weight: 700;
+  }
+  
+  .errorText {
+    font-size: 18px;
+    max-width: 260px;
+  }
+  
+  .returnToHome {
+    font-size: 14px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 }

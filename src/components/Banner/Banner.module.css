@@ -20,10 +20,39 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
 }
 
 .bannerTitle {
   font-size: 48px;
   font-weight: 500;
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1030px) {
+  .bannerWrapper {
+    margin-bottom: 22px;
+  }
+
+  .smallerBannerOnMobile {
+    height: 111px;
+  }
+
+  .bannerPicture {
+    border-radius: 10px;
+  }
+
+  .bannerOverlay {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    transform: translate(10%, -110%);
+    text-align: left;
+    height: 24px;
+    max-width: 217px;
+  }
+
+  .bannerTitle {
+    font-size: 24px;
+  }
 }

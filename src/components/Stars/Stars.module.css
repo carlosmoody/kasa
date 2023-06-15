@@ -3,3 +3,19 @@
   flex-direction: row;
   gap: 15px;
 }
+
+.star {
+  width: 25px;
+  height: 24px;
+}
+
+@media screen and (max-width: 1030px) {
+  .starsWrapper {
+    gap: 6.59px;
+  }
+
+  .star {
+    width: 14.41px;
+    height: 13px;
+  }
+}

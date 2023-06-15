@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 0px 10px 0px 10px;
   margin-right: 10px;
+  margin-top: 20px;
   background-color: var(--primary-color);
   border-radius: 10px;
   display: inline-flex;
@@ -15,4 +16,18 @@
   color: var(--secondary-color);
   font-size: 14px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 1030px) {
+  .tag {
+    height: 18px;
+    min-width: 84px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .tagContent {
+    font-size: 10px;
+
+  }
 }

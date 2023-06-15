@@ -31,6 +31,7 @@ export default function Home() {
         title="Chez vous, partout et ailleurs"
         altText="Falaises et océan"
         picture={homePicture}
+        location="home"
       />
       <div className={styles.list}>
         {mockData.map((location) => (

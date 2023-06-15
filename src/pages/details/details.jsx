@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import styles from "./details.module.css";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Avatar from "../../components/Avatar/Avatar";
@@ -18,40 +18,46 @@ export default function Details() {
 
   const details = getDetails(id);
 
-  const equipmentList = details.equipments.map((item, index) => (
-    <li key={index} className={dropdownStyles.itemList}>
-      {item}
-    </li>
-  ));
+  if (!details) {
+    return <Navigate to="/not-found" />;
+  } else {
+    const equipmentList = details.equipments.map((item, index) => (
+      <li key={index} className={dropdownStyles.itemList}>
+        {item}
+      </li>
+    ));
 
-  return (
-    <div className={styles.detailsWrapper}>
-      <Slideshow images={details.pictures} />
-      <div className={styles.detailsHeader}>
-        <div>
-          <h2 className={styles.detailsTitle}>{details.title}</h2>
-          <p className={styles.detailsLocation}>{details.location}</p>
+    return (
+      <div className={styles.detailsWrapper}>
+        <Slideshow images={details.pictures} />
+        <div className={styles.detailsHeader}>
+          <div>
+            <h2 className={styles.detailsTitle}>{details.title}</h2>
+            <p className={styles.detailsLocation}>{details.location}</p>
+            <div>
+              {details.tags.map((tag, index) => (
+                <Tags key={index} content={tag} />
+              ))}
+            </div>
+          </div>
+          <div className={styles.avatarStarsWrapper}>
+            <Avatar name={details.host.name} url={details.host.picture} />
+            <Stars rating={details.rating} />
+          </div>
         </div>
-        <Avatar name={details.host.name} url={details.host.picture} />
-        <div>
-          {details.tags.map((tag, index) => (
-            <Tags key={index} content={tag} />
-          ))}
+        <div className={styles.detailsDropdownsWrapper}>
+          <Dropdown
+            location="details"
+            title="Description"
+            content={details.description}
+          />
+          <Dropdown
+            location="details"
+            title="Équipements"
+            content={equipmentList}
+          />
         </div>
-        <Stars rating={details.rating} />
       </div>
-      <div className={styles.detailsDropdownsWrapper}>
-        <Dropdown
-          location="details"
-          title="Description"
-          content={details.description}
-        />
-        <Dropdown
-          location="details"
-          title="Équipements"
-          content={equipmentList}
-        />
-      </div>
-    </div>
-  );
+    );
+  }
 }
