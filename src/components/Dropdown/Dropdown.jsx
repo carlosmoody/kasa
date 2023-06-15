@@ -20,7 +20,7 @@ export default function Dropdown(props) {
       <button
         className={
           props.location === "details"
-            ? `${styles.titleContainer} ${styles.titleSmallContainer}`
+            ? `${styles.titleContainer} ${styles.titleSmallContainer} ${styles.titleContainerRounded}`
             : `${styles.titleContainer} ${styles.titleLargeContainer}`
         }
         onClick={toggleDropdown}

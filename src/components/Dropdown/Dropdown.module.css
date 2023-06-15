@@ -24,6 +24,10 @@
   align-items: center;
 }
 
+.titleContainerRounded {
+  border-radius: 10px;
+}
+
 .titleSmallContainer {
   height: 52px;
 }
@@ -107,6 +111,10 @@
 
   .dropdownTitle {
     padding-left: 11px;
+  }
+
+  .titleContainerRounded {
+    border-radius: 5px;
   }
 
   .dropdownSmallTitle {
