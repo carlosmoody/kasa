@@ -56,7 +56,13 @@ export default function Slideshow(props) {
           alt="suivant"
         />
       </div>
-      <div className={styles.slideshowPosition}>
+      <div
+        className={
+          listLength === 1
+            ? `${styles.slideshowPosition} ${styles.hide}`
+            : styles.slideshowPosition
+        }
+      >
         <span className={styles.slideshowPositionText}>
           {currentIndex + 1}/{listLength}
         </span>
