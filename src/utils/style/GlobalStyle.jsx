@@ -2,9 +2,15 @@ import { createGlobalStyle } from "styled-components";
 import colors from "./colors";
 
 const StyledGlobalStyle = createGlobalStyle`
+    :root {
+      --primary-color: ${colors.primary};
+      --secondary-color: ${colors.secondary};
+      --background-color: ${colors.background};
+    }
+
     * {
-      font-family: 'Montserrat';
-      color: ${colors.primary};
+    font-family: 'Montserrat';
+    color: var(--primary-color);
     }
 
     body {

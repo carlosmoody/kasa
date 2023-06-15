@@ -2,7 +2,6 @@
   position: relative;
   height: 415px;
   border-radius: 25px;
-  background-color: grey;
   margin-bottom: 30px;
 
 }
@@ -55,7 +54,7 @@
 }
 
 .slideshowPositionText {
-  color: white;
+  color: var(--secondary-color);
   font-size: 18px;
   font-weight: 500;
 }

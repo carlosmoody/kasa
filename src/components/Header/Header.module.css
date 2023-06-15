@@ -24,7 +24,7 @@
 }
 
 .headerLogo path {
-  fill: #FF6060;
+  fill: var(--primary-color);
 }
 
 .active {

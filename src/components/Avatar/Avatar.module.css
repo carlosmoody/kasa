@@ -16,7 +16,7 @@
   font-size: 18px;
   font-weight: 500px;
   text-align: right;
-  color: #FF6060;
+  color: var(--primary-color);
   margin: 0px;
 }
 

@@ -1,4 +1,4 @@
-import { useParams, redirect } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from "./details.module.css";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Avatar from "../../components/Avatar/Avatar";

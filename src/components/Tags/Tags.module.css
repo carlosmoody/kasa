@@ -4,7 +4,7 @@
   box-sizing: border-box;
   padding: 0px 10px 0px 10px;
   margin-right: 10px;
-  background-color: #FF6060;
+  background-color: var(--primary-color);
   border-radius: 10px;
   display: inline-flex;
   justify-content: center;
@@ -12,7 +12,7 @@
 }
 
 .tagContent {
-  color: white;
+  color: var(--secondary-color);
   font-size: 14px;
   font-weight: 500;
 }
