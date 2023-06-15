@@ -37,8 +37,12 @@ export default function Details() {
         <Stars rating={details.rating} />
       </div>
       <div className={styles.detailsDropdownsWrapper}>
-        <Dropdown title="Description" content={details.description} />
-        <Dropdown title="Équipements" content={equipments} />
+        <Dropdown
+          location="details"
+          title="Description"
+          content={details.description}
+        />
+        <Dropdown location="details" title="Équipements" content={equipments} />
       </div>
     </div>
   );

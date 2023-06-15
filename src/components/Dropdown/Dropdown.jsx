@@ -10,9 +10,30 @@ export default function Dropdown(props) {
   };
 
   return (
-    <div className={styles.dropdownWrapper}>
-      <button onClick={toggleDropdown}>
-        <h3 className={styles.dropdownTitle}>{props.title}</h3>
+    <div
+      className={
+        props.location === "details"
+          ? `${styles.dropdownWrapper} ${styles.dropdownSmallWrapper}`
+          : `${styles.dropdownWrapper} ${styles.dropdownLargeWrapper}`
+      }
+    >
+      <button
+        className={
+          props.location === "details"
+            ? `${styles.titleContainer} ${styles.titleSmallContainer}`
+            : `${styles.titleContainer} ${styles.titleLargeContainer}`
+        }
+        onClick={toggleDropdown}
+      >
+        <h3
+          className={
+            props.location === "details"
+              ? `${styles.dropdownTitle} ${styles.dropdownSmallTitle}`
+              : `${styles.dropdownTitle} ${styles.dropdownLargeTitle}`
+          }
+        >
+          {props.title}
+        </h3>
         <img
           src={dropdownArrow}
           alt="flêche"
@@ -26,7 +47,15 @@ export default function Dropdown(props) {
             : styles.answerWrapper
         }
       >
-        <p className={styles.answerText}>{props.content}</p>
+        <p
+          className={
+            props.location === "details"
+              ? `${styles.answerText} ${styles.answerSmallText}`
+              : `${styles.answerText} ${styles.answerLargeText}`
+          }
+        >
+          {props.content}
+        </p>
       </div>
     </div>
   );

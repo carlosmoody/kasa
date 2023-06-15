@@ -1,13 +1,20 @@
 .dropdownWrapper {
   width: 100%;
-  max-width: 582px;
   display: flex;
   flex-direction: column;
   gap: 0px;
 }
 
-button {
-  height: 52px;
+.dropdownSmallWrapper {
+  max-width: 582px;
+}
+
+.dropdownLargeWrapper {
+  max-width: 1023px;
+  padding-bottom: 31px;
+}
+
+.titleContainer {
   z-index: 1;
   background-color: var(--primary-color);
   border: none;
@@ -18,12 +25,28 @@ button {
   align-items: center;
 }
 
+.titleSmallContainer {
+  height: 52px;
+}
+
+.titleLargeContainer {
+  height: 47px;
+}
+
 .dropdownTitle {
   color: var(--secondary-color);
   font-size: 18px;
   font-weight: 500;
   padding-left: 20px;
   margin: 0px;
+}
+
+.dropdownSmallTitle {
+  font-size: 18px;
+}
+
+.dropdownLargeTitle {
+  font-size: 24px;
 }
 
 .icon {
@@ -52,7 +75,14 @@ button {
 }
 
 .answerText {
-  font-size: 18px;
   font-weight: 400;
   margin: 0px;
+}
+
+.answerSmallText {
+  font-size: 18px;
+}
+
+.answerLargeText {
+  font-size: 24px;
 }
