@@ -1,7 +1,10 @@
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
+  const location = useLocation();
+  console.log(location.pathname);
+
   return (
     <div className={styles.headerWrapper}>
       <Link to="/" className={styles.headerNavLink}>
@@ -19,10 +22,24 @@ export default function Header() {
         </svg>
       </Link>
       <nav className={styles.headerNav}>
-        <Link to="/" className={styles.headerNavLink}>
+        <Link
+          to="/"
+          className={
+            location.pathname === "/"
+              ? styles.active + " " + styles.headerNavLink
+              : styles.headerNavLink
+          }
+        >
           Accueil
         </Link>
-        <Link to="/about" className={styles.headerNavLink}>
+        <Link
+          to="/about"
+          className={
+            location.pathname === "/about"
+              ? styles.active + " " + styles.headerNavLink
+              : styles.headerNavLink
+          }
+        >
           A propos
         </Link>
       </nav>
