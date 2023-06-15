@@ -5,10 +5,6 @@
   gap: 0px;
 }
 
-.dropdownSmallWrapper {
-  max-width: 582px;
-}
-
 .dropdownLargeWrapper {
   max-width: 1023px;
 }

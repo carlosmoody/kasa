@@ -13,7 +13,7 @@ export default function Dropdown(props) {
     <div
       className={
         props.location === "details"
-          ? `${styles.dropdownWrapper} ${styles.dropdownSmallWrapper}`
+          ? `${styles.dropdownWrapper}`
           : `${styles.dropdownWrapper} ${styles.dropdownLargeWrapper}`
       }
     >
